@@ -9,7 +9,7 @@ E-mail:yunjinqi@qq.com
 Differentiate yourself in the world from anyone else. 
 """  
 #用于访问OKCOIN 现货REST API  
-##############################################################################  
+#############################################################################  
 import http.client  
 import urllib  
 import json  
@@ -34,7 +34,6 @@ def httpGet(url,resource,params=''):
 def httpPost(url,resource,params):  
      headers = {  
             "Content-type" : "application/x-www-form-urlencoded"  
-  
      }  
      conn = http.client.HTTPSConnection(url, timeout=10)  
      temp_params = urllib.parse.urlencode(params)  
@@ -45,9 +44,9 @@ def httpPost(url,resource,params):
      params.clear()  
      conn.close()  
      return data  
+
 #############################################################################  
 import urllib  
-  
   
 class OKCoinSpot:  
   
@@ -177,6 +176,7 @@ class OKCoinSpot:
         temp_params = urllib.parse.urlencode(params)  
         #print(temp_params)  
         return httpGet(self.__url, kline_resourse, temp_params)  
+
 #############################################################################  
 #!/usr/bin/python  
 # -*- coding: utf-8 -*-  
@@ -354,4 +354,5 @@ class OKCoinFuture:
         #temp_params = urllib.parse.urlencode(params)  
         #print(temp_params)  
        # return httpGet(self.__url, kline_resourse, temp_params)  
-########################  
+
+#############################################################################  

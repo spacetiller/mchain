@@ -356,3 +356,4 @@ class OKCoinFuture:
        # return httpGet(self.__url, kline_resourse, temp_params)  
 
 #############################################################################  
+
